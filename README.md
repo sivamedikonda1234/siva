@@ -1,6 +1,6 @@
 # siva
 terraform code
-resource "google_compute_instance" "mhr-qa" {
+resource "google_compute_instance" "siva-qa" {
   name         = var.instancename
   machine_type = var.machinetype
   zone         = var.zone
@@ -16,7 +16,7 @@ resource "google_compute_instance" "mhr-qa" {
  
 
   network_interface {
-    subnetwork = google_compute_subnetwork.subenet-mhr-hr.id
+    subnetwork = google_compute_subnetwork.subenet-siva-hr.id
 
     access_config {
       // Ephemeral IP
